@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhishShield Web</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>PhishShield</h1>
+      <p class="hint">Select text from one message in WhatsApp Web or Telegram Web, or one email in Outlook on the web. Only your selection is sent for analysis.</p>
+      <button id="analyze" type="button">Analyze selected message</button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <section id="result" aria-live="polite" hidden>
+        <h2 id="risk"></h2>
+        <h3>Why it was flagged</h3>
+        <ul id="reasons"></ul>
+        <h3>Local link checks</h3>
+        <ul id="links"></ul>
+        <h3>Suggested action</h3>
+        <ul id="suggestions"></ul>
+        <h3>Limitations</h3>
+        <ul id="limitations"></ul>
+        <button id="export" type="button">Download JSON report</button>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+﻿id,message,risk_level,label,category,language,sender_context,has_url,urls,indicators,is_augmented,template_id,split,provenance
+SYN0016,Aapka data pack activate ho gaya hai aur 15 December tak valid hai.,Low,legitimate,legit_telecom,hinglish,business,0,,none,1,SYN0016,synthetic_holdout,synthetic_holdout_example
+SYN0017,आपके प्रीपेड नंबर पर नया प्लान सफलतापूर्वक शुरू हो गया है।,Low,legitimate,legit_telecom,hi,business,0,,none,1,SYN0017,synthetic_holdout,synthetic_holdout_example
+SYN0018,We received your broadband bill payment. Your next bill is due on 5 December.,Low,legitimate,legit_telecom,en,business,0,,none,1,SYN0018,synthetic_holdout,synthetic_holdout_example
+SYN0019,Aapka order pickup ke liye ready hai. Store counter par order number dikhana.,Low,legitimate,legit_delivery,hinglish,business,0,,none,1,SYN0019,synthetic_holdout,synthetic_holdout_example
+SYN0020,आपका रिटर्न पैकेज कुरियर ने ले लिया है। खरीदारी वाले ऐप में स्थिति देख सकते हैं।,Low,legitimate,legit_delivery,hi,business,0,,none,1,SYN0020,synthetic_holdout,synthetic_holdout_example
+SYN0021,"Chai bana dena, main aadhe ghante mein ghar pahunch raha hoon.",Low,legitimate,legit_family_chat,hinglish,saved_contact,0,,none,1,SYN0021,synthetic_holdout,synthetic_holdout_example
+SYN0022,"आज दादी के घर dinner है, सब लोग सात बजे तक पहुँच जाना।",Low,legitimate,legit_family_chat,hi,saved_contact,0,,none,1,SYN0022,synthetic_holdout,synthetic_holdout_example
+SYN0023,I left the book on your desk. Please bring it when you come over.,Low,legitimate,legit_family_chat,en,saved_contact,0,,none,1,SYN0023,synthetic_holdout,synthetic_holdout_example
+SYN0024,Recruit people to my earning circle and receive a bonus for each new member.,Medium,suspicious,mlm_pitch,en,unknown,0,,unsolicited_contact;referral_request;financial_promise,1,SYN0024,synthetic_holdout,synthetic_holdout_example
+SYN0025,Is private trading group mein har hafte fixed profit ka claim hai. Join karne ke liye DM karo.,Medium,suspicious,investment_unverified,hinglish,unknown,0,,unsolicited_contact;unverified_investment;financial_promise,1,SYN0025,synthetic_holdout,synthetic_holdout_example
+SYN0026,आपको मुफ्त शॉपिंग कूपन मिल सकता है। पुरस्कार लेने से पहले यह सर्वे भरें।,Medium,suspicious,survey_reward,hi,unknown,0,,unsolicited_contact;unexpected_reward;survey_request,1,SYN0026,synthetic_holdout,synthetic_holdout_example
+SYN0027,I need money urgently. Send it now and do not call me to check; I will explain later.,Medium,suspicious,unknown_favour,en,unknown,0,,urgency;money_request;discourages_verification,1,SYN0027,synthetic_holdout,synthetic_holdout_example
+SYN0028,Unusual sign-in detected. Verify your password and security code now: https://account-check.example.com,High,phishing,account_takeover,en,unknown,1,,credential_request;urgency;account_lure;external_link,1,SYN0028,synthetic_holdout,synthetic_holdout_example
+SYN0029,आज बिजली काट दी जाएगी। सेवा जारी रखने के लिए तुरंत भुगतान करें: https://bill-help.example.com,High,phishing,utility_disconnection,hi,unknown,1,,payment_request;urgency;service_threat;external_link,1,SYN0029,synthetic_holdout,synthetic_holdout_example
+SYN0030,Galti se paise bhejne ka dawa karke sender bolta hai ki turant UPI PIN share karo.,High,phishing,upi_scam,hinglish,unknown,0,,upi_pin_request;money_lure;urgency,1,SYN0030,synthetic_holdout,synthetic_holdout_example

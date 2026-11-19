@@ -1,0 +1,187 @@
+{
+  "kind": "synthetic_benchmark_not_real_world_evaluation",
+  "rows": 15,
+  "benchmark_sha256": "f7724270017adeb4adc6ac303477570b3179437e39d563bd3d478c9b6085fecb",
+  "accuracy": 0.8,
+  "macro_f1": 0.7678571428571428,
+  "macro_precision": 0.7638888888888888,
+  "macro_recall": 0.7916666666666666,
+  "legitimate_false_positive_rate": 0.125,
+  "label_order": [
+    "legitimate",
+    "suspicious",
+    "phishing"
+  ],
+  "confusion_matrix": [
+    [
+      7,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      3
+    ]
+  ],
+  "per_class": {
+    "legitimate": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1-score": 0.875,
+      "support": 8.0
+    },
+    "suspicious": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1-score": 0.5714285714285714,
+      "support": 4.0
+    },
+    "phishing": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1-score": 0.8571428571428571,
+      "support": 3.0
+    },
+    "accuracy": 0.8,
+    "macro avg": {
+      "precision": 0.7638888888888888,
+      "recall": 0.7916666666666666,
+      "f1-score": 0.7678571428571428,
+      "support": 15.0
+    },
+    "weighted avg": {
+      "precision": 0.7944444444444444,
+      "recall": 0.8,
+      "f1-score": 0.7904761904761904,
+      "support": 15.0
+    }
+  },
+  "examples": [
+    {
+      "id": "SYN0016",
+      "category": "legit_telecom",
+      "language": "hinglish",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.5857128670709665
+    },
+    {
+      "id": "SYN0017",
+      "category": "legit_telecom",
+      "language": "hi",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.4554148730668036
+    },
+    {
+      "id": "SYN0018",
+      "category": "legit_telecom",
+      "language": "en",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.5945349391350994
+    },
+    {
+      "id": "SYN0019",
+      "category": "legit_delivery",
+      "language": "hinglish",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.5879047856550106
+    },
+    {
+      "id": "SYN0020",
+      "category": "legit_delivery",
+      "language": "hi",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.42103835422038877
+    },
+    {
+      "id": "SYN0021",
+      "category": "legit_family_chat",
+      "language": "hinglish",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.6803811810878915
+    },
+    {
+      "id": "SYN0022",
+      "category": "legit_family_chat",
+      "language": "hi",
+      "true_label": "legitimate",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.4646772889031771
+    },
+    {
+      "id": "SYN0023",
+      "category": "legit_family_chat",
+      "language": "en",
+      "true_label": "legitimate",
+      "predicted_label": "suspicious",
+      "predicted_probability": 0.42171153383438076
+    },
+    {
+      "id": "SYN0024",
+      "category": "mlm_pitch",
+      "language": "en",
+      "true_label": "suspicious",
+      "predicted_label": "suspicious",
+      "predicted_probability": 0.5934807952079678
+    },
+    {
+      "id": "SYN0025",
+      "category": "investment_unverified",
+      "language": "hinglish",
+      "true_label": "suspicious",
+      "predicted_label": "suspicious",
+      "predicted_probability": 0.4834844037384914
+    },
+    {
+      "id": "SYN0026",
+      "category": "survey_reward",
+      "language": "hi",
+      "true_label": "suspicious",
+      "predicted_label": "legitimate",
+      "predicted_probability": 0.38290327255244627
+    },
+    {
+      "id": "SYN0027",
+      "category": "unknown_favour",
+      "language": "en",
+      "true_label": "suspicious",
+      "predicted_label": "phishing",
+      "predicted_probability": 0.561056422930139
+    },
+    {
+      "id": "SYN0028",
+      "category": "account_takeover",
+      "language": "en",
+      "true_label": "phishing",
+      "predicted_label": "phishing",
+      "predicted_probability": 0.84826799137969
+    },
+    {
+      "id": "SYN0029",
+      "category": "utility_disconnection",
+      "language": "hi",
+      "true_label": "phishing",
+      "predicted_label": "phishing",
+      "predicted_probability": 0.6426122050704983
+    },
+    {
+      "id": "SYN0030",
+      "category": "upi_scam",
+      "language": "hinglish",
+      "true_label": "phishing",
+      "predicted_label": "phishing",
+      "predicted_probability": 0.4409860257390191
+    }
+  ]
+}
