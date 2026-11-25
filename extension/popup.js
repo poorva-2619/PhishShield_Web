@@ -72,27 +72,27 @@ function renderList(list, items) {
     entry.textContent = typeof item === "string" ? item : item.message;
     list.append(entry);
   }
+}
 
-  function renderLinks(list, links) {
-    list.replaceChildren();
-    for (const link of links) {
-      const entry = document.createElement("li");
-      const signals = link.signals.map(describeLinkSignal);
-      entry.textContent = signals.length
-        ? `${link.host}: ${signals.join("; ")}`
-        : `${link.host}: no URL-format warning detected; this does not mean the site is safe.`;
-      list.append(entry);
-    }
-    list.hidden = links.length === 0;
+function renderLinks(list, links) {
+  list.replaceChildren();
+  for (const link of links) {
+    const entry = document.createElement("li");
+    const signals = link.signals.map(describeLinkSignal);
+    entry.textContent = signals.length
+      ? `${link.host}: ${signals.join("; ")}`
+      : `${link.host}: no URL-format warning detected; this does not mean the site is safe.`;
+    list.append(entry);
   }
+  list.hidden = links.length === 0;
+}
 
-  function describeLinkSignal(signal) {
-    const descriptions = {
-      embedded_credentials: "text before the host may obscure the destination",
-      punycode_hostname: "encoded internationalized hostname",
-      ip_address_host: "numeric IP address used as the host",
-      unencrypted_http: "unencrypted HTTP connection",
-    };
-    return descriptions[signal] || "unrecognized URL signal";
-  }
+function describeLinkSignal(signal) {
+  const descriptions = {
+    embedded_credentials: "text before the host may obscure the destination",
+    punycode_hostname: "encoded internationalized hostname",
+    ip_address_host: "numeric IP address used as the host",
+    unencrypted_http: "unencrypted HTTP connection",
+  };
+  return descriptions[signal] || "unrecognized URL signal";
 }

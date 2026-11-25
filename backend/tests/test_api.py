@@ -6,7 +6,9 @@ from backend.app.main import app
 client = TestClient(app)
 
 
-@pytest.mark.parametrize("platform", ["whatsapp_web", "telegram_web", "outlook_web"])
+@pytest.mark.parametrize(
+    "platform", ["whatsapp_web", "telegram_web", "gmail_web", "outlook_web"]
+)
 def test_supported_web_platforms_can_be_analyzed(platform: str) -> None:
     response = client.post(
         "/api/v1/analyze",

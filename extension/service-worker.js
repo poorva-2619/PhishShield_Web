@@ -23,14 +23,14 @@ async function analyzeSelection() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   const platform = getSupportedPlatform(tab?.url);
   if (!tab?.id || !platform) {
-    throw new Error("Open WhatsApp Web, Telegram Web, or Outlook on the web and select text before analyzing.");
+    throw new Error("Open WhatsApp Web, Telegram Web, Gmail, or Outlook on the web and select text before analyzing.");
   }
 
   let selection;
   try {
     selection = await chrome.tabs.sendMessage(tab.id, { type: "GET_SELECTED_MESSAGE" });
   } catch {
-    throw new Error("Could not read the selection. Reload WhatsApp Web and try again.");
+    throw new Error("Could not read the selection. Reload the current web page and try again.");
   }
 
   const messageText = selection?.messageText;
@@ -108,6 +108,9 @@ function getSupportedPlatform(tabUrl) {
   }
   if (hostname === "web.telegram.org") {
     return "telegram_web";
+  }
+  if (hostname === "mail.google.com") {
+    return "gmail_web";
   }
   if (
     hostname === "outlook.live.com"

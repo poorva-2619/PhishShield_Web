@@ -9,7 +9,7 @@ class AnalyzeRequest(BaseModel):
     model_config = ConfigDict(extra="forbid", populate_by_name=True)
 
     schema_version: Literal[1] = Field(alias="schemaVersion")
-    platform: Literal["whatsapp_web", "telegram_web", "outlook_web"]
+    platform: Literal["whatsapp_web", "telegram_web", "gmail_web", "outlook_web"]
     message_text: StrictStr = Field(
         alias="messageText",
         min_length=1,

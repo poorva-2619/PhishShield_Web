@@ -35,8 +35,8 @@ Send a `POST` to `/api/v1/analyze` with a JSON body:
 }
 ```
 
-The supported `platform` values are `whatsapp_web`, `telegram_web`, and
-`outlook_web`.
+The supported `platform` values are `whatsapp_web`, `telegram_web`,
+`gmail_web`, and `outlook_web`.
 
 The response contains `riskLevel`, `reasons`, `suggestions`, and `limitations`.
 Suggestions are matched to the detected warning signs; they recommend safer
@@ -126,20 +126,20 @@ is not established.
 ## Chrome extension MVP
 
 The Manifest V3 extension analyzes only text explicitly selected by the user
-on WhatsApp Web, Telegram Web, or Outlook on the web. For Outlook, select the
-email text to review; for chat services, select one message. It sends only
-that selection to the local backend after the user clicks **Analyze selected
-message**. The extension does not scan messages or run analysis in the
-background. JSON report export is initiated by the user and downloaded
-locally; it includes the selected message or email text.
+on WhatsApp Web, Telegram Web, Gmail, or Outlook on the web. For Gmail and
+Outlook, select the email text to review; for chat services, select one
+message. It sends only that selection to the local backend after the user
+clicks **Analyze selected message**. The extension does not scan messages or
+run analysis in the background. JSON report export is initiated by the user
+and downloaded locally; it includes the selected message or email text.
 
 ### Load the extension
 
 1. Start the backend using the instructions above.
 2. Open `chrome://extensions` and enable **Developer mode**.
 3. Select **Load unpacked** and choose the repository's `extension` folder.
-4. Open WhatsApp Web, Telegram Web, or Outlook on the web. Select the text of
-   one message or email, then open the PhishShield extension popup.
+4. Open WhatsApp Web, Telegram Web, Gmail, or Outlook on the web. Select the
+   text of one message or email, then open the PhishShield extension popup.
 5. Click **Analyze selected message**. To retain a report, click **Download
    JSON report**.
 

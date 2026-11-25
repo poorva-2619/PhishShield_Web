@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "PhishShield Web",
   "version": "0.1.0",
-  "description": "Analyze text you select in WhatsApp Web, Telegram Web, or Outlook on the web.",
+  "description": "Analyze text you select in WhatsApp Web, Telegram Web, Gmail, or Outlook on the web.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -13,6 +13,7 @@
   "host_permissions": [
     "https://web.whatsapp.com/*",
     "https://web.telegram.org/*",
+    "https://mail.google.com/*",
     "https://outlook.live.com/*",
     "https://outlook.office.com/*",
     "https://outlook.office365.com/*",
@@ -35,6 +36,7 @@
       "matches": [
         "https://web.whatsapp.com/*",
         "https://web.telegram.org/*",
+        "https://mail.google.com/*",
         "https://outlook.live.com/*",
         "https://outlook.office.com/*",
         "https://outlook.office365.com/*"
